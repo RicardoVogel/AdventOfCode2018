@@ -14,7 +14,7 @@ public class d4c1 {
 
 		while (sc.hasNextLine()) {
 			inputList.add(sc.nextLine());
-		}
+		} 
 
 		Collections.sort(inputList);
 		d4Guard prev = null;
