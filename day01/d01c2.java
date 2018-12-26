@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class d1c2 {
+public class d01c2 {
 	public static List<Integer> list;
 	public static Scanner sc;
 	public static int result = 0;
@@ -10,6 +10,7 @@ public class d1c2 {
 	public static int n = 0;
 
 	public static void main(String[] args) throws FileNotFoundException {
+		long startTime = System.nanoTime();
 		list = new ArrayList<Integer>();
 		while (!done) {
 			run();
@@ -18,7 +19,12 @@ public class d1c2 {
 		System.out.println("Amount of times traversed: " + n);
 		System.out.println("Amount of numbers: " + i);
 		sc.close();
+		long endTime = System.nanoTime();
+
+		long duration = (endTime - startTime); 
+		System.out.println(duration);
 	}
+	
 
 	public static void run() throws FileNotFoundException {
 		sc = new Scanner(new File("d1input.txt"));

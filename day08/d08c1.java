@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class d8c1 {
+public class d08c1 {
 	static Scanner sc;
 	static int tot;
 

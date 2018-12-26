@@ -1,9 +1,9 @@
 import java.util.Arrays;
 
-public class d9 {
+public class d09 {
     public static void main(String[] args) {
-        System.out.println("Challenge 1: " + winningmarble(416, 7161700));
-        System.out.println("Challenge 2: " + winningmarble(416, 71617));
+        System.out.println("Challenge 1: " + winningmarble(416, 71617));
+        System.out.println("Challenge 2: " + winningmarble(416, 7161700));
     }
 
     public static long winningmarble(int totalPlayers, int finalMarble) {

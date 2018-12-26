@@ -1,13 +1,13 @@
 import java.util.*;
 
-public class d4Guard {
+public class d04Guard {
 	private int number;
 	private int minAsleep;
 	public List<String> strings;
 	public List<String> times;
 	public int bar = -1;
 
-	public d4Guard(int number, int minAsleep) {
+	public d04Guard(int number, int minAsleep) {
 		this.number = number;
 		this.minAsleep = minAsleep;
 		strings = new ArrayList<String>();

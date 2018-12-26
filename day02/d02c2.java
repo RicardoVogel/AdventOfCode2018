@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class d2c2 {
+public class d02c2 {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		boxcheck();

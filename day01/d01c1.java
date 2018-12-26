@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class d1c1 {
+public class d01c1 {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		Scanner sc = new Scanner(new File("d1input.txt"));

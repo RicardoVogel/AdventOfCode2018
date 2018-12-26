@@ -1,16 +1,16 @@
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
 import java.util.Scanner;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertEquals;
 
-class d2c1Test {
+class d02c1Test {
 
 	@Test
 	void test0() {
 		String str = "abcdef\n" + "bababc\n" + "abbcde\n" + "abcccd\n" + "aabcdd\n" + "abcdee\n" + "ababab";
 		Scanner sc = new Scanner(str);
-		int res = d2c1.checksum(sc);
+		int res = d02c1.checksum(sc);
 		assertEquals(12, res);
 	}
 
@@ -18,7 +18,7 @@ class d2c1Test {
 	void testl0() {
 		String str = "aaabbcccdd\n";
 		Scanner sc = new Scanner(str);
-		int res = d2c1.checksum(sc);
+		int res = d02c1.checksum(sc);
 		assertEquals(1, res);
 	}
 	
@@ -26,7 +26,7 @@ class d2c1Test {
 	void teasdfstl0() {
 		String str = "revtcubfeiehzsgxdoafwkqmlp\n";
 		Scanner sc = new Scanner(str);
-		int res = d2c1.checksum(sc);
+		int res = d02c1.checksum(sc);
 		assertEquals(1, res);
 	}
 

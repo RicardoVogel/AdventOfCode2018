@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class d7c1 {
+public class d07c1 {
 	static String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	static boolean[] visited = new boolean[27];
 	static List<Node> nodeList = new ArrayList<Node>();

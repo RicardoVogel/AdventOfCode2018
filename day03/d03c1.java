@@ -1,5 +1,5 @@
 
-public class d3c2 {
+public class d03c1 {
 	static String input = "#1 @ 596,731: 11x27\r\n" + "#2 @ 20,473: 23x22\r\n" + "#3 @ 730,802: 23x23\r\n"
 			+ "#4 @ 212,725: 28x25\r\n" + "#5 @ 65,785: 13x15\r\n" + "#6 @ 495,395: 16x11\r\n"
 			+ "#7 @ 750,29: 26x17\r\n" + "#8 @ 658,927: 22x11\r\n" + "#9 @ 109,286: 11x16\r\n"
@@ -426,12 +426,18 @@ public class d3c2 {
 	static int[][] arr = new int[2000][2000];
 
 	public static void main(String[] args) {
-		claims();
+		long startTime = System.nanoTime();
+		System.out.println(claims());
+		long endTime = System.nanoTime();
+
+		long duration = (endTime - startTime); 
+		System.out.println(duration);
 	}
 
-	public static void claims() {
+	public static int claims() {
+		int counter = 0;
+		
 		String[] lines = input.split("\r\n");
-
 		for (String line : lines) {
 			int startx = Integer.parseInt(line.split(",")[0].split("@ ")[1]);
 			int starty = Integer.parseInt(line.split(",")[1].split(":")[0]);
@@ -440,27 +446,15 @@ public class d3c2 {
 
 			for (int y = starty; y != starty + sizey; y++) {
 				for (int x = startx; x != startx + sizex; x++) {
+					if(arr[y][x] == 1) {
+						counter++;
+					}
 					arr[y][x]++;
 				}
 			}
 		}
-		for (String line : lines) {
-			int startx = Integer.parseInt(line.split(",")[0].split("@ ")[1]);
-			int starty = Integer.parseInt(line.split(",")[1].split(":")[0]);
-			int sizex = Integer.parseInt(line.split("x")[0].split(": ")[1]);
-			int sizey = Integer.parseInt(line.split("x")[1]);
-
-			boolean exactlyOne = true;
-			for (int y = starty; y != starty + sizey; y++) {
-				for (int x = startx; x != startx + sizex; x++) {
-					if (arr[y][x] != 1) {
-						exactlyOne = false;
-					}
-				}
-			}
-			if(exactlyOne) {
-				System.out.println(line);
-			}
-		}
+		
+		return counter;
 	}
+
 }
